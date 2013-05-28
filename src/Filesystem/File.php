@@ -28,13 +28,13 @@ class File {
      * Get current path.
      * @return string
      */
-    public function pwd($path = false) {
-        if (!$path && !$this->path)
-            $path = getcwd();
+    public function pwd($filePath = false) {
+        if (!$filePath && !$this->filePath)
+            $filePath = getcwd();
 
-        if (!$path)
-            $path = $this->path;
-        return $path;
+        if (!$filePath)
+            $filePath = $this->filePath;
+        return $filePath;
     }
 
     /**
@@ -76,7 +76,7 @@ class File {
 
     /**
      * Append to a file.
-     * @param  string  $path
+     * @param  string  $filePath
      * @param  string  $data
      * @return int
      */
